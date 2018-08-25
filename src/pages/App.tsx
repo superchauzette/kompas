@@ -2,10 +2,10 @@ import { Flex } from "grid-styled"
 import * as React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
-import NavBar from "./components/Navbar"
-import About from "./pages/About"
-import Home from "./pages/Home"
-import Topic from "./pages/Topic"
+import NavBar from "../components/Navbar"
+import About from "./Home/About"
+import Home from "./Home/Home"
+import Topic from "./Topic/Topic"
 
 const Main = () => (
   <>
