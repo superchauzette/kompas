@@ -32,7 +32,7 @@ const PlayingAlbum = ({ album = albumData }: IProps) => (
       px="10px"
       color="white"
     >
-      <p style={{ marginBottom: "5px", fontWeight: 600, fontSize: '18px' }}>
+      <p style={{ marginBottom: "5px", fontWeight: 600, fontSize: "18px" }}>
         {album.name} - {album.annee}
       </p>
     </Flex>
@@ -47,7 +47,7 @@ const Main = () => (
       width="100%"
       mr="70px"
     >
-      <PlayingAlbum />
+      <PlayingAlbum  />
       <Player />
     </Flex>
     <Flex>

@@ -1,6 +1,7 @@
 import { Box, Flex } from "grid-styled"
 import * as React from "react"
-import { BrowserRouter as Router } from "react-router-dom"
+// import { FaHeart, FaList } from "react-icons/fa"
+
 import styled from "styled-components"
 import Albums from "./Albums"
 import Artistes from "./Artistes"
@@ -32,58 +33,63 @@ const BgImg = styled(Flex)`
 `
 
 const App = () => (
-  <Router>
-    <Flex>
-      <Flex
-        flexDirection="column"
-        width="250px"
-        bg="#2a2a38"
-        style={{ minWidth: "250px", height: "100vh", zIndex: 3 }}
-      >
-        <Box mt="20px" mb="30px" pl="20px" color="white">
-          <h3>Playlist</h3>
-          <h3>Favories</h3>
-        </Box>
-        <Box pl="20px" color="white" mb="30px">
-          <h3>Artistes</h3>
-        </Box>
-
-        <Flex style={{ overflow: "scroll" }} width="100%">
-          <Artistes />
-        </Flex>
-      </Flex>
-
-      <Flex
-        flexDirection="column"
-        width="calc(100%-250px)"
-        style={{ overflow: "hidden" }}
-      >
-        <Flex style={{ height: "64vh", zIndex: 3 }}>
-          <Flex flexDirection="column" px="40px" width="100%">
-            <Box mb="50px">
-              <Title color="white">Rihanna</Title>
-            </Box>
-            <Main />
-          </Flex>
-        </Flex>
-        <Flex
-          style={{ height: "36vh", overflow: "scroll", zIndex: 3 }}
-          width="100%"
-          flexDirection="column"
-          justifyContent="center"
-        >
-          <Albums />
-        </Flex>
-        <BgImg
-          url={imageURL.micro}
-          ml="-10px"
-          mt="-10px"
-          width="100%"
-          style={{ height: "106%", position: "fixed" }}
-        />
+  <Flex>
+    <Flex
+      flexDirection="column"
+      width="250px"
+      bg="#2a2a38"
+      style={{ minWidth: "250px", height: "100vh", zIndex: 3 }}
+    >
+      {/* <Box pl="20px" mt="55px" color="white" mb="40px">
+        <h4 style={{ marginBottom: "20px" }}>
+          <FaList style={{ marginRight: "20px" }} />
+          PLAYLIST
+        </h4>
+        <h4>
+          <FaHeart style={{ marginRight: "20px" }} />
+          FAVORITES
+        </h4>
+      </Box> */}
+      <Box pl="20px" color="white" mb="20px" mt="20px">
+        <h4>ARTISTES</h4>
+      </Box>
+      <Flex px="20px" style={{ overflow: "scroll",  }} width="100%">
+        <Artistes />
       </Flex>
     </Flex>
-  </Router>
+
+    <Flex
+      flexDirection="column"
+      width="calc(100%-250px)"
+      style={{ overflow: "hidden" }}
+    >
+      <Flex style={{ height: "64vh", zIndex: 3 }}>
+        <Flex flexDirection="column" px="40px" width="100%">
+          <Box mb="50px">
+            <Title color="white">Rihanna </Title>
+          </Box>
+          <Main />
+        </Flex>
+      </Flex>
+      <Flex
+        style={{ height: "36vh", overflow: "scroll", zIndex: 3 }}
+        width="calc(100% - 70px)"
+        flexDirection="column"
+        justifyContent="center"
+        ml="30px"
+      >
+        <Albums />
+      </Flex>
+      <BgImg
+        url={imageURL.micro}
+        ml="-10px"
+        mt="-10px"
+        width="100%"
+        style={{ height: "106%", position: "fixed" }}
+      />
+    </Flex>
+  </Flex>
 )
+
 
 export default App

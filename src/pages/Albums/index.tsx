@@ -74,9 +74,9 @@ const AlbumAnnee = styled.p`
   color: #ffffff85;
 `
 const Albums = ({ albums = albumsData }: IProps) => (
-  <Flex style={{ height: "100%" }} alignItems="center" px="20px" width="100%">
+  <Flex style={{ height: "100%" }} alignItems="center" width="100%">
     {albums.map(album => (
-      <Flex mr="20px" flexDirection="column">
+      <Flex mr="20px" flexDirection="column" style={{ cursor: "pointer" }}>
         <img src={album.url} width="180px" height="180px" />
         <AlbumName>{album.name}</AlbumName>
         <AlbumAnnee>{album.annee}</AlbumAnnee>

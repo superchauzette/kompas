@@ -1,6 +1,7 @@
 import { Flex } from "grid-styled"
 import * as React from "react"
 import { FaCircle } from "react-icons/fa"
+import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 
 const artistesData = [
@@ -11,7 +12,7 @@ const artistesData = [
   { name: "Orelsan" },
   { name: "Majid Jordan" },
   { name: "Justin Bieber" },
-  { name: "Madonna" },
+  { name: "Les fantaisites de carrfour" },
   { name: "Jay Z" },
   { name: "Kayne West" },
   { name: "Drake" },
@@ -36,8 +37,17 @@ const ArtisteWrapper = styled(Flex)`
 
 const Artiste = ({ name }: IArtiste) => (
   <ArtisteWrapper p="22px" mb="10px" alignItems="center">
-    <FaCircle size="0.3rem" color="#6dcbfa" style={{marginRight: '10px'}}/>
-    <p>{name}</p>
+    <FaCircle size="0.3rem" color="#6dcbfa" style={{ marginRight: "20px" }} />
+    <NavLink
+      to={`/artiste/${name}`}
+      style={{ color: "white", textDecoration: 'none'}}
+      activeStyle={{
+        color: "rgb(205, 37, 143)",
+        fontWeight: "bold",
+      }}
+    >
+      {name}
+    </NavLink>
   </ArtisteWrapper>
 )
 
