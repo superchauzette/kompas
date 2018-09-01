@@ -40,20 +40,10 @@ const App = () => (
       bg="#2a2a38"
       style={{ minWidth: "250px", height: "100vh", zIndex: 3 }}
     >
-      {/* <Box pl="20px" mt="55px" color="white" mb="40px">
-        <h4 style={{ marginBottom: "20px" }}>
-          <FaList style={{ marginRight: "20px" }} />
-          PLAYLIST
-        </h4>
-        <h4>
-          <FaHeart style={{ marginRight: "20px" }} />
-          FAVORITES
-        </h4>
-      </Box> */}
       <Box pl="20px" color="white" mb="20px" mt="20px">
         <h4>ARTISTES</h4>
       </Box>
-      <Flex px="20px" style={{ overflow: "scroll",  }} width="100%">
+      <Flex px="20px" style={{ overflowY: "scroll" }} width="100%">
         <Artistes />
       </Flex>
     </Flex>
@@ -90,6 +80,5 @@ const App = () => (
     </Flex>
   </Flex>
 )
-
 
 export default App

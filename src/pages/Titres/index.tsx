@@ -29,7 +29,7 @@ interface ITitres {
 const Titres = ({ titres = titresData }: ITitres) => (
   <Flex
     flexDirection="column"
-    style={{ overflow: "scroll" }}
+    style={{ overflowY: "scroll" }}
     pr="20px"
     mr="-20px"
   >
